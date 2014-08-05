@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'pg', '~> 0.14.1'
 
-gem 'pg'
-
-gem 'activeadmin'
+gem 'activeadmin', '~> 0.5.1'
 
 
 # Gems used only for assets and not required
@@ -23,24 +20,14 @@ group :assets do
 end
 
 group :development do
-  gem 'pry'
+  gem 'pry', '~> 0.9.12'
 end
 
-gem 'delayed_job_active_record'
+gem 'delayed_job_active_record', '~> 3.0.5'
 
-gem 'unicorn'
+local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
+if File.exists?(local_gemfile)
+  puts "Loading Gemfile.local ..." if $DEBUG # `ruby -d` or `bundle -v`
+  instance_eval File.read(local_gemfile)
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

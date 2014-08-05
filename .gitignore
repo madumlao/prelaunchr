@@ -18,3 +18,8 @@
 .DS_Store
 
 .elasticbeanstalk
+
+# Ignore all compiled files
+/Gemfile.lock
+/Gemfile.local
+
