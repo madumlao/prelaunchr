@@ -23,7 +23,7 @@ group :development do
   gem 'pry', '~> 0.9.12'
 end
 
-gem 'delayed_job_active_record', '~> 3.0.5'
+gem 'delayed_job_active_record', '~> 0.4.4'
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
 if File.exists?(local_gemfile)
