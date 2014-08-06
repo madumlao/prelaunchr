@@ -1,13 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'railties', '~> 3.2.0'
-gem 'bourbon', '~> 3.0.1'
-gem 'jquery-rails', '~> 2.2.0'
 
 gem 'pg', '~> 0.14.1'
 
-gem 'activeadmin', '~> 0.5.1'
+gem 'activeadmin', '~> 0.6.3'
 
 
 # Gems used only for assets and not required
