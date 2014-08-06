@@ -1,0 +1,12 @@
+# put implementation-specific gems here
+
+# which application server?
+#  gem 'unicorn-rails'
+#  gem 'thin-rails'
+#  gem 'puma-rails'
+
+# which database?
+#  gem 'mysql2'
+#  gem 'pg'
+#  gem 'sqlite'
+
