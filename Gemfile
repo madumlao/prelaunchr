@@ -5,6 +5,7 @@ gem 'rails', '3.2.11'
 gem 'pg', '~> 0.14.1'
 
 gem 'activeadmin', '~> 0.6.3'
+gem 'mailchimp-api', '~> 2.0.5', require: 'mailchimp'
 
 
 # Gems used only for assets and not required

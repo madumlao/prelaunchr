@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
-    after_create :send_welcome_email
+    after_save :subscribe_to_list
 
     REFERRAL_STEPS = [
         {
@@ -53,5 +53,13 @@ class User < ActiveRecord::Base
 
     def send_welcome_email
         UserMailer.delay.signup_email(self)
+    end
+    
+    def subscribe_to_list
+      MailchimpApi::subscribe_user! self, self.referrals.count
+      if referrer
+        referrer.reload
+        MailchimpApi::subscribe_user! referrer, referrer.referrals.count
+      end
     end
 end
